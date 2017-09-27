@@ -257,9 +257,16 @@ do a lot of work in the FFI.
 
 ### Stick with Puresript for now
 
+- replace prototype code
+- encapsulate the emerging patterns
+- consider alternatives to Pux
+
+### Slide Style
+
 ### Device model
 
-- multiple users
+- multiple shadows
+- "reported" device state
 
 ### New integrations
 
@@ -268,6 +275,16 @@ do a lot of work in the FFI.
 - Embedded controller
 - Embedded viewer
 - More identity providers
+
+---
+
+# Next
+
+### New Features
+
+- selectable and/or custom styles
+- presentation metadata
+- animation?
 
 ---
 
