@@ -284,6 +284,7 @@ do a lot of work in the FFI.
 
 - selectable and/or custom styles
 - presentation metadata
+- media controls
 - animation?
 
 ---
