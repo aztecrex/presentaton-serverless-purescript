@@ -213,5 +213,69 @@ received by all listening viewers.
 When a presentation is added, the surface writes it as a text file to
 S3
 
+---
 
+# Lessons
+
+## Authentication flow and authorization configuration
+
+This was the most time-consuming part of development. The documentation
+for Google Signin and Cognito abounds. But much of it is out-of-date,
+not applicable to browser-only applications, missing critical details,
+or just plain wrong.
+
+Part of the problem is that the APIs change fairly rapidly and you can't
+always tell if two documents are referring to the same API.
+
+---
+
+# Lessons
+
+### Purescript works really well
+
+- the FFI story is great
+- The standard categorical data types are well conceived and avoid many
+of the problems that Haskell has
+
+### Purescript is still pretty young
+
+- The package management tooling for Purescript can make it hard to
+share code between projects
+- There are not many integration-oriented packages so you will have to
+do a lot of work in the FFI.
+
+
+### Purecript language has a few ergonomic challenges
+
+- Effect labels
+- Import warnings
+- Explicit qualification
+
+---
+
+# Next
+
+### Stick with Puresript for now
+
+### Device model
+
+- multiple users
+
+### New integrations
+
+- Slack
+- Alexa
+- Embedded controller
+- Embedded viewer
+- More identity providers
+
+---
+
+# Next
+
+### AWS Lambda
+
+### AWS DymamoDB
+
+### Self-service accounts
 
