@@ -1,35 +1,35 @@
 # Purescript in the House
 
-_Functional and Serverless on AWS_
+## _Functional and Serverless on AWS_
 
 ---
 
-# Motivation
+## Motivation
 
-## Non-trivial application with lots of feature potential
+See if a pure functional language could be used for all parts of an application.
 
-## Transcend platforms
+### Non-trivial application with lots of feature potential
+
+### Transcend platforms
+
 - Web
 - Mobile
 - Embedded
 
-# Prefer to develop in Haskell but...
-
-integrating in browser not a great story (yet).
 
 ---
 
-# Motivation
+## Motivation
 
-## Run completely in the cloud
+### Run completely in the cloud
 
-## ... without servers
+### ... without servers
 
 ---
 
-# Review of Serverless
+## Review of Serverless
 
-## Ephemeral
+### Ephemeral
 
 Push code to a provider and it runs in response to events. Advantages
 include elasticity,  ease of deployment, and integration with PaaS services.
@@ -37,7 +37,7 @@ include elasticity,  ease of deployment, and integration with PaaS services.
 Ephemeral deployments can offer huge cost savings when an application is
 dark much of the time.
 
-### For Example
+#### For Example
 
 - AWS Lambda
 - Google Cloud Functions
@@ -45,9 +45,9 @@ dark much of the time.
 
 ---
 
-# Review of Serverless
+## Review of Serverless
 
-## Browser-only
+### Browser-only
 
 All logic is in the web page. It coordinates 3rd-party services directly
 
@@ -59,9 +59,9 @@ attention to security.
 
 ---
 
-# Review of Serverless
+## Review of Serverless
 
-## Hybrid
+### Hybrid
 
 The two approaches can be used together, playing to the strengths of each.
 Parts of the application can be migrated between the two to support new
@@ -69,7 +69,7 @@ features and use patterns.
 
 ---
 
-# Purescript
+## Purescript
 
 ### Pure functional
 
@@ -83,7 +83,7 @@ features and use patterns.
 
 ---
 
-# The Presenter Application
+## The Presenter Application
 
 The application is browser only. The application uses several
 services directly from the web page.
@@ -98,32 +98,32 @@ services directly from the web page.
 
 ---
 
-# AWS IoT
+## AWS IoT
 
-## Shadow devices
+### Shadow devices
 
 Coordinate the application with "desired" and "reported" states.
 
-## Pub/sub Topics
+### Pub/sub Topics
 
 Distribute events to all application components whether on server,
 browser, or embedded.
 
 ---
 
-# Google Signin
+## Google Signin
 
 Familiar "login with google" workflow.
 
 ---
 
-# AWS S3
+## AWS S3
 
 S3 storage objects persist application state between sessions.
 
 ---
 
-# AWS Cognito
+## AWS Cognito
 
 Cognito federated identities tie 3rd-party authentication, such as Google Signin,
 to AWS roles and data. Cognito supports both unauthenticated and authenticated
@@ -137,87 +137,87 @@ S3 permission can be limited to a specific file object.
 
 ---
 
-# Build Pipelines
+## Build Pipelines
 
 The application is continually deployed on every push to Github using
 CodePipeline and CodeBuild.
 
 ---
 
-# Repeatable Infrastructure
+## Repeatable Infrastructure
 
 The runtime and build infrastructure is desribed by runnable templates that
 provision all parts of the application.
 
 ---
 
-# How it Works
+## How it Works
 
-## Viewer
+### Viewer
 
-### Unauthentiated authorization
+#### Unauthentiated authorization
 
 The viewer contacts Cognito without authentication and receives an
 unauthenticated identity. The identity
 can be traded for very limited credentials that only allow it to read the status
 of an IoT shadow device.
 
-### Connect to the shadow
+#### Connect to the shadow
 
 The viewer retrieves the desired state of the shadow device and configures itself
 to match the desired state. It attempts to configure itself to match that state.
 
-### Subscribe to updates
+#### Subscribe to updates
 
 The viewer continues to listen for changes in the shadow state and continually
 matches that state with its real configuration.
 
 ---
 
-# How it Works
+## How it Works
 
-## Authenticated control surface
+### Authenticated control surface
 
-### Login with Google
+#### Login with Google
 
 A user's Google login state is determined using the Google APIs. If the user is
 not currently logged in, the normal Google authentication flow is initiated.
 
-### Authorize with Cognito
+#### Authorize with Cognito
 
 The acquired Google token is submitted to Cognito for a federated identity. The
 identity is exchanged for limited credentials that allow the control surface
 to read and write the list of presentations in S3 and to modify the shadow
 device state.
 
-### Load presentations from S3
+#### Load presentations from S3
 
 The control surface initially loads the list of presentations from a file
 in S3.
 
 ---
 
-# How it Works
+## How it Works
 
-## Authenticated control surface
+### Authenticated control surface
 
-### Change slide or presentation
+#### Change slide or presentation
 
 When a slide or presentation button is pressed, the control surface
 modifies the shadow
 device state in Cognito with the new page number. The new state is immediately
 received by all listening viewers.
 
-### Add a presentation
+#### Add a presentation
 
 When a presentation is added, the surface writes it as a text file to
 S3
 
 ---
 
-# Lessons
+## Lessons
 
-## Authentication flow and authorization configuration
+### Authentication flow and authorization configuration
 
 This was the most time-consuming part of development. The documentation
 for Google Signin and Cognito abounds. But much of it is out-of-date,
@@ -229,7 +229,7 @@ always tell if two documents are referring to the same API.
 
 ---
 
-# Lessons
+## Lessons
 
 ### Purescript works really well
 
@@ -253,7 +253,7 @@ do a lot of work in the FFI.
 
 ---
 
-# Next
+## Next
 
 ### Stick with Puresript for now
 
@@ -278,7 +278,7 @@ do a lot of work in the FFI.
 
 ---
 
-# Next
+## Next
 
 ### New Features
 
@@ -289,7 +289,7 @@ do a lot of work in the FFI.
 
 ---
 
-# Next
+## Next
 
 ### AWS Lambda
 
