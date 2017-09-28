@@ -4,13 +4,31 @@
 
 ---
 
-## Motivation
+# Purescript in the House
 
-See if a pure functional language could be used for all parts of an application.
+### Why do this?
 
-### Non-trivial application with lots of feature potential
+### Purescript
 
-### Transcend platforms
+### Serverless
+
+### Application and How it works
+
+### Discussion and code review
+
+---
+
+## Why do this?
+
+See if a strongly-typed pure functional language could be used for
+all parts of an application.
+
+### I just wanted a quick way to write and show a presentation
+
+Haskell?  Not a great browser story (yet)
+
+
+### Could it be networked?
 
 - Web
 - Mobile
@@ -19,15 +37,36 @@ See if a pure functional language could be used for all parts of an application.
 
 ---
 
-## Motivation
+## Why do this?
 
-### Run completely in the cloud
-
-### ... without servers
+### Could it be run without servers?
 
 ---
 
-## Review of Serverless
+## Purescript
+
+### Strongly typed pure functional
+
+Pure functional means the code doesn't hide its effects.
+
+### Compiles to Javascript
+
+Suitable to run in browser, Node, Lambda, and others.
+
+### Haskell-like syntax
+
+### Strict evaluation
+
+No need for a runtime component.
+
+### Straightforward, powerful FFI
+
+No runtime means all imported functions are just simple javascript
+functions. You can break effect encapulation here, though.
+
+---
+
+## Quick Review of Serverless Architecture
 
 ### Ephemeral
 
@@ -45,7 +84,7 @@ dark much of the time.
 
 ---
 
-## Review of Serverless
+## Quick Review of Serverless Architecture
 
 ### Browser-only
 
@@ -59,7 +98,7 @@ attention to security.
 
 ---
 
-## Review of Serverless
+## Quick Review of Serverless Architecture
 
 ### Hybrid
 
@@ -67,19 +106,6 @@ The two approaches can be used together, playing to the strengths of each.
 Parts of the application can be migrated between the two to support new
 features and use patterns.
 
----
-
-## Purescript
-
-### Pure functional
-
-### Haskell-like syntax
-
-### Strict evaluation
-
-### Compiles to Javascript for server or web
-
-### Straightforward, powerful FFI
 
 ---
 
@@ -146,7 +172,7 @@ CodePipeline and CodeBuild.
 
 ## Repeatable Infrastructure
 
-The runtime and build infrastructure is desribed by runnable templates that
+The runtime and build infrastructure are desribed by runnable templates that
 provision all parts of the application.
 
 ---
@@ -215,85 +241,7 @@ S3
 
 ---
 
-## Lessons
+# Purescript in the House
 
-### Authentication flow and authorization configuration
-
-This was the most time-consuming part of development. The documentation
-for Google Signin and Cognito abounds. But much of it is out-of-date,
-not applicable to browser-only applications, missing critical details,
-or just plain wrong.
-
-Part of the problem is that the APIs change fairly rapidly and you can't
-always tell if two documents are referring to the same API.
-
----
-
-## Lessons
-
-### Purescript works really well
-
-- the FFI story is great
-- The standard categorical data types are well conceived and avoid many
-of the problems that Haskell has
-
-### Purescript is still pretty young
-
-- The package management tooling for Purescript can make it hard to
-share code between projects
-- There are not many integration-oriented packages so you will have to
-do a lot of work in the FFI.
-
-
-### Purecript language has a few ergonomic challenges
-
-- Effect labels
-- Import warnings
-- Explicit qualification
-
----
-
-## Next
-
-### Stick with Puresript for now
-
-- replace prototype code
-- encapsulate the emerging patterns
-- consider alternatives to Pux
-
-### Slide Style
-
-### Device model
-
-- multiple shadows
-- "reported" device state
-
-### New integrations
-
-- Slack
-- Alexa
-- Embedded controller
-- Embedded viewer
-- More identity providers
-
----
-
-## Next
-
-### New Features
-
-- selectable and/or custom styles
-- presentation metadata
-- media controls
-- animation?
-
----
-
-## Next
-
-### AWS Lambda
-
-### AWS DymamoDB
-
-### Self-service accounts
+## Discussion and Code
 
