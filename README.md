@@ -91,7 +91,7 @@ dark much of the time.
 
 - All logic is in the web page. It coordinates 3rd-party services directly
 from the brower.
--Browser-only applications offer elasticity and ease of deployment. Processing
+- Elasticity and ease of deployment. Processing
 is offloaded to client computers.
 - Browser-only applications can be hard to integrate and require particular
 attention to security.
@@ -190,7 +190,7 @@ of an IoT shadow device.
 #### Connect to the shadow
 
 The viewer retrieves the desired state of the shadow device and configures itself
-to match the desired state. It attempts to configure itself to match that state.
+to match the desired state.
 
 #### Subscribe to updates
 
@@ -262,6 +262,10 @@ S3
 
 - multiple shadows
 - "reported" device state
+
+---
+
+## Next
 
 ### New integrations
 
