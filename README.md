@@ -25,7 +25,8 @@ all parts of an application.
 
 ### I just wanted a quick way to write and show a presentation
 
-Haskell?  Not a great browser story (yet)
+- Preferrably using Markdown syntax
+- write it in Haskell?  Not a great browser story (yet)
 
 
 ### Could it be networked?
@@ -88,12 +89,11 @@ dark much of the time.
 
 ### Browser-only
 
-All logic is in the web page. It coordinates 3rd-party services directly
-
-Browser-only applications offer elasticity and ease of deployment. Processing
-load is offloaded to client computers.
-
-Browser-only applications can be hard to integrate and require particular
+- All logic is in the web page. It coordinates 3rd-party services directly
+from the brower.
+-Browser-only applications offer elasticity and ease of deployment. Processing
+is offloaded to client computers.
+- Browser-only applications can be hard to integrate and require particular
 attention to security.
 
 ---
@@ -102,9 +102,8 @@ attention to security.
 
 ### Hybrid
 
-The two approaches can be used together, playing to the strengths of each.
-Parts of the application can be migrated between the two to support new
-features and use patterns.
+The two approaches can be used together and parts can be migrated
+between the two to support new features and use patterns.
 
 
 ---
