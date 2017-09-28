@@ -245,3 +245,49 @@ S3
 
 ## Discussion and Code
 
+---
+
+---
+
+## Next
+
+### Stick with Puresript for now
+
+- replace prototype code
+- encapsulate the emerging patterns
+- consider alternatives to Pux
+
+### Slide Style
+
+### Device model
+
+- multiple shadows
+- "reported" device state
+
+### New integrations
+
+- Slack
+- Alexa
+- Embedded controller
+- Embedded viewer
+- More identity providers
+
+---
+
+## Next
+
+### New Features
+
+- selectable and/or custom styles
+- presentation metadata
+- media controls
+- animation?
+
+---
+
+## Next
+
+### AWS Lambda
+
+### AWS DymamoDB
+
